@@ -1,11 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Usage Examples</title>
+    <!-- 1 JavaScript in the <head> section -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("JavaScript in the <head> section is loaded");
+        // Виконуємо якусь дію після завантаження сторінки
+        document
+          .getElementById("headButton")
+          .addEventListener("click", function () {
+            alert("Hello from JS in the <head> section!");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript Usage Examples</h1>
+
+    <!-- 2 Inline JavaScript in HTML -->
+    <button onclick="alert('Hello')">Click me (Inline JS)</button>
+
+    <!-- 3 Internal JavaScript in <script> tag -->
+    <script>
+      function showMessage() {
+        alert("Hello");
+      }
+    </script>
+    <button onclick="showMessage()">Click me (Internal JS)</button>
+
+    <!--4 Button for the <head> section script -->
+    <button id="headButton">Click me (Head JS)</button>
+
+    <!-- 5 External JavaScript in a separate file -->
+    <button id="externalButton">Click me (External JS)</button>
+    <script src="./main.js"></script>
+
+    <!-- 6 JavaScript in the <body> section -->
+    <script>
+      console.log("JavaScript in the <body> section is loaded");
+    </script>
+
+    <div>
+      <h1>Вкажи всі можливі способи коментування коду:</h1>
+      <ol>
+        <li>// Цей коментар займає весь рядок alert('Привіт');</li>
+        <li> alert('Світ'); // Цей коментар міститься після інструкції</li>
+        <li>
+          * Приклад із двома повідомленнями. Це багаторядковий коментар. */
+          alert('Привіт'); alert('Світ');
+        </li>
+        <li>/* Закоментований код alert('Привіт'); */ alert('Світ');</li>
+      </ol>
+    </div>
+
+    <div>
+        <h2>Які стилі написання імен змінних ти знаєш?</h2>
+        <ol>
+            <li>Camel Case - для імен змінних, функцій та об'єктів. 
+                Приклад: camelCase (друге слово з великої літери)</li>
+            <li>Pascal Case - для імен класів та конструкторів.
+                Приклад: MyClass (кожне слово з великої літери)</li>
+            <li>Snake Case - іноді для констан або деяких стилів коду. 
+                Приклад: my_variable (слова з маленької літери розділяються нижнім підкресленням)</li>
+            <li>Kebab Case - в більшості випадків для CSS-класів та імен файлів. 
+                Приклад: my-class (слова розділені дефісом)</li>
+            <li>Upper Snake Case - для констант
+                Приклад: MY_CONSTANT (всі букви великі, розділені нижнім підкресленням)</li>
+        </ol>
+    </div>
+    <div>
+      <h3>Правильні імена</h3>
+      <ol>
+      <li>let firstName;<br> <!--вибачаюсь за некорректне використання тегу))--> 
+        console.log('Olena');
+      </li>
+      <li>let lastName;<br>
+        console.log('Onyshkiv');</li>
+      <li>let fullName;<br>
+        console.log('Olena Onyshkiv');</li>
+      <li>let userName;<br>
+        console.log('OlenaKin');</li>
+    </ol>
+    <p>P.S. Для змінних використовується Camel Case</p>
+    </div>
+    <div>
+      <h4>Неправильні імена</h4>
+      <ul>
+        <li>let 1stName; //Починається з цифри</li>
+      <li>let last-Name; // Містить дефіс</li>
+      <li> let full name;   // Містить пробіл</li>
+      <li>let let;         // Використовує зарезервоване слово</li>
+      <li>let @username;   // Містить символ '@'</li>
+    </ul>
+    </div>
+  </body>
 </html>
